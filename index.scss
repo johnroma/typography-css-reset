@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  overflow-wrap: normal;
+}
+section:has(:is(h1, h2, h3, h4, h5, h6) + p) :is(h1, h2, h3, h4, h5, h6) {
+  margin-bottom: 0.75rlh;
+  margin-top: 1.5rlh;
+}
+section > :is(h1, h2, h3, h4, h5, h6):first-child {
+  margin-top: 0;
+}
+
+section:has(p + p) p {
+  margin-bottom: 0.25rlh;
+}
+section p:last-child {
+  margin-bottom: 0;
+}
